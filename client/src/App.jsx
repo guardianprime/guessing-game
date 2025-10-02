@@ -10,9 +10,9 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-sky-950">
       <h1>Fullstack App</h1>
-      <p>Backend says: {message}</p>
+      <p className="text-xl text-white">Backend says: {message}</p>
     </div>
   );
 }
