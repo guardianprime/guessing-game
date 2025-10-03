@@ -1,16 +1,37 @@
-# React + Vite
+### GUESSING GAME
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Context
 
-Currently, two official plugins are available:
+This is a fun game for you and your friends. The idea here is to build a live guessing game such that you and your friends can easily see your results, scores and answers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requirements:
+Game session interface should be like a chat interface
+User should be able to start a game session(game master)
+Other users can join the game session(players) before the game session starts
+Users should be able to see number of players connected to a game session
+Game master should be able to create a question and an answer for other players in this game session
+Game session can only be started by the game master and there must be more than two players before game session starts
+When the game master starts the game sessions:
+a question is displayed for each player and each player has 3 attempts to guess the right answer.
+Other users(players) cannot join this session while the game is in progress
+The game session ends on the following conditions:
+A player gets the right answer
+The time for the game session expires(default to 60 seconds)
+When a player gets the right answer:
+other players cannot guess the answer
+The winner and answer is displayed to other players and the winning player(You have won)
+10 points is assigned to the winning player
+When the time for the game session expires
+other players cannot guess the answer
+No winner is displayed to other players
+No points is assigned to any player
+Answer is displayed to the other players
+Players can see each others scores
+When game session ends, another player becomes the game master and can create a question with an answer for other players to guess
+Game session is deleted when all the players in the session has left the session
 
-## React Compiler
+Notice Board
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Remember to validate inputs.
+2. Remember there are more than one ways to skin a cat.
+3. Don’t focus on beautiful design (but design anyway for your portfolio).
